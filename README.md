@@ -14,3 +14,29 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+consts : menyimpan warna warna, animation, padding
+
+CLEAN ARCHITECTURE
+function :
+- can make our code is scalable (bukan cuma baik diawal, tp dia jg mengalami improvement).
+- can make our code is easy to maintenance
+- can make our code is clean and easy to read
+- can make our code is eazy to understand
+- can make our code is long-lasting project
+
+ MVVM (Model-View-ViewModel) : 
+ - models --> utk menyimpan blueprint(class) dari sebuah data source
+ - data --> data source
+ - view --> screen/tampilan
+ - viewmodels --> konfigurasi business logic
+
+
+modular : memisahkan suatu problem menjadi kecil kecil
+
+
+ MVC (Model-View_Controller) :
+
+ responsive standar : design uk ip x 
+ 812 --> height ip x
+ 375 --> width ip x
