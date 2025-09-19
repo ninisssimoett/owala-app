@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:owala_app/data/onboarding_data.dart';
 import 'package:owala_app/utils/consts.dart';
-import 'package:owala_app/views/onboarding/components/boarding_content.dart';
+import 'package:owala_app/views/onboarding/home/components/boarding_content.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});

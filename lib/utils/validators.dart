@@ -1,5 +1,5 @@
 class Validators {
-  static validateFullName(String? value) {
+  static String? validateFullName(String? value) {
     if (value == null || value.isEmpty) {
       return "Full Name is required";
     }
