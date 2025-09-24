@@ -8,6 +8,7 @@ class Categories extends StatefulWidget {
   @override
   State<Categories> createState() => _CategoriesState();
 }
+
 List<Map<String, dynamic>> categories = [
   {
     "icon": Icons.local_drink,
@@ -15,7 +16,7 @@ List<Map<String, dynamic>> categories = [
   },
   {
     "icon": Icons.color_lens,
-    "text": "Colordrop",
+    "text": "Color Drop",
   },
   {
     "icon": Icons.card_giftcard,
@@ -29,7 +30,6 @@ List<Map<String, dynamic>> categories = [
 
 int selectedIndex = 0;
 
-
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
@@ -38,9 +38,9 @@ class _CategoriesState extends State<Categories> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         Row(
-          children: [
-             Text(
+          Row(
+            children: [
+              Text(
             "Categories",
             style: TextStyle(
               fontSize: 18,
@@ -48,6 +48,7 @@ class _CategoriesState extends State<Categories> {
               color: textColor,
             ),
           ),
+          Spacer(),
           GestureDetector(
             onTap: () {},
             child: Text(
@@ -59,17 +60,17 @@ class _CategoriesState extends State<Categories> {
               ),
             ),
           )
-          ],
-         ),
-         SizedBox(height: defaultPadding),
-         SizedBox(
-          height: 65,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: categories.length,
-            itemBuilder: (context, index) => _buildCategory(index),
+            ],
           ),
-         )
+          SizedBox(height: defaultPadding),
+          SizedBox(
+            height: 65,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: categories.length,
+              itemBuilder: (context, index) => _buildCategory(index),
+            ),
+          )
         ],
       ),
     );
@@ -88,24 +89,24 @@ class _CategoriesState extends State<Categories> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.all(10), //kurangi padding agar icon lebih kecil
+              padding: EdgeInsets.all(10), // kurangi padding agar icon lebih kecil
               decoration: BoxDecoration(
-                color: selectedIndex == index ? primaryColor : Colors.grey,
-                shape: BoxShape.circle,
+                color: selectedIndex == index ? primaryColor.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.0),
+                shape: BoxShape.circle
               ),
               child: Icon(
-                categories[index] ["icon"],
+                categories[index]["icon"],
                 color: selectedIndex == index ? primaryColor : secondaryColor,
                 size: 20,
               ),
             ),
             SizedBox(height: 7),
             Text(
-              categories[index] ["text"],
+              categories[index]["text"],
               style: TextStyle(
                 color: selectedIndex == index ? primaryColor : secondaryColor,
                 fontWeight: selectedIndex == index ? FontWeight.bold : FontWeight.normal,
-                fontSize: 12,
+                fontSize: 12
               ),
             )
           ],

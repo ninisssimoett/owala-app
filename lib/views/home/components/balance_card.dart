@@ -11,7 +11,7 @@ class BalanceCard extends StatelessWidget {
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Color(0xFF236A91),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12)
       ),
       child: Row(
         children: [
@@ -26,9 +26,9 @@ class BalanceCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 Row(
-                  children: [
-                     Icon(Icons.account_balance_wallet, color: Color(0xFF236A91)),
+                  Row(
+                    children: [
+                      Icon(Icons.account_balance_wallet, color: Color(0xFF236A91)),
                   SizedBox(width: 8),
                   Text(
                     "Bottles",
@@ -36,25 +36,26 @@ class BalanceCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.black
                     ),
+                  )
+                    ],
                   ),
-                  ],
-                 ),
-                 SizedBox(height: 8),
-                 Text(
-                  "Rp 900.000",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                 )
+                  SizedBox(height: 8),
+                  Text(
+                    "Rp 800.000",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
+                  )
                 ],
               ),
             ),
           ),
-
           Expanded(
+            flex: 3,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _actionButton(Icons.arrow_upward, "Pay"),
                 _actionButton(Icons.add_circle, "Top Up"),
@@ -65,8 +66,6 @@ class BalanceCard extends StatelessWidget {
         ],
       ),
     );
-
-    
   }
 
   Widget _actionButton(IconData icon, String label) {
@@ -77,9 +76,9 @@ class BalanceCard extends StatelessWidget {
         Text(
           label,
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.white
           ),
-       )
+        )
       ],
     );
   }

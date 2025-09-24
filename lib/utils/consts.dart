@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // A primary color definition
-const primaryColor = Color(0xFF236A91);
+const primaryColor = Color.fromARGB(255, 235, 16, 16);
 const primaryLightColor = Color(0xFFFFECDF);
 const primaryGradietColor = LinearGradient(
   colors: [

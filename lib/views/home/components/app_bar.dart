@@ -16,14 +16,14 @@ class CatalogAppBar extends StatelessWidget implements PreferredSizeWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Location",
+              "Welcome Back",
               style: TextStyle(
                 color: textColor,
                 fontSize: 14,
               ),
             ),
             Text(
-              "Jakarta, Indonesia",
+              "Nisrina",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,

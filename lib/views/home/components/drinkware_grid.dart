@@ -17,15 +17,17 @@ class DrinkwareGrid extends StatelessWidget {
           crossAxisCount: 2,
           mainAxisSpacing: defaultPadding,
           crossAxisSpacing: defaultPadding,
-          childAspectRatio: 0.75,
+          childAspectRatio: 0.75
         ),
         itemCount: products.length,
         itemBuilder: (context, index) => ItemsCard(
           product: products[index],
-          press: () {},
-        ),
-
-      ),
-    );
+          press: () => Navigator.pushNamed(
+            context,
+            '/detail',
+            arguments: products[index]
+          ),
+        )),
+      );
   }
 }
