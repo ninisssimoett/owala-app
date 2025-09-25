@@ -35,7 +35,7 @@ class _TumblrrrAppState extends State<TumblrrrApp> {
       ),
       // initialRoute: untuk mendefinisikan kelas apa yang akan tampil pertama kali
       // saat aplikasi dijalankan
-      initialRoute: '/catalogue',
+      initialRoute: '/onboarding',
       routes: {
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),

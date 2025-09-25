@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:owala_app/utils/consts.dart';
 
 class Categories extends StatefulWidget {
-
   const Categories({super.key});
 
   @override
@@ -10,22 +9,11 @@ class Categories extends StatefulWidget {
 }
 
 List<Map<String, dynamic>> categories = [
-  {
-    "icon": Icons.local_drink,
-    "text": "Drinkware",
-  },
-  {
-    "icon": Icons.color_lens,
-    "text": "Color Drop",
-  },
-  {
-    "icon": Icons.card_giftcard,
-    "text": "Bundles",
-  },
-  {
-    "icon": Icons.accessibility,
-    "text": "Accessories",
-  },
+  {"icon": "assets/images/ic1.png", "text": "Shoes"},
+  {"icon": "assets/images/ic2.png", "text": "Soccer"},
+  {"icon": "assets/images/ic3.png", "text": "Bags"},
+  {"icon": "assets/images/ic4.png", "text": "Accessories"},
+  {"icon": "assets/images/ic5.png", "text": "Underwear"},
 ];
 
 int selectedIndex = 0;
@@ -41,25 +29,25 @@ class _CategoriesState extends State<Categories> {
           Row(
             children: [
               Text(
-            "Categories",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: textColor,
-            ),
-          ),
-          Spacer(),
-          GestureDetector(
-            onTap: () {},
-            child: Text(
-              "View All",
-              style: TextStyle(
-                color: Color(0xFF236A91),
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+                "Categories",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                ),
               ),
-            ),
-          )
+              Spacer(),
+              GestureDetector(
+                onTap: () {},
+                child: Text(
+                  "View All",
+                  style: TextStyle(
+                    color: Color(0xFF236A91),
+                    fontSize: 19,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ],
           ),
           SizedBox(height: defaultPadding),
@@ -70,7 +58,7 @@ class _CategoriesState extends State<Categories> {
               itemCount: categories.length,
               itemBuilder: (context, index) => _buildCategory(index),
             ),
-          )
+          ),
         ],
       ),
     );
@@ -89,15 +77,22 @@ class _CategoriesState extends State<Categories> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.all(10), // kurangi padding agar icon lebih kecil
+              padding: EdgeInsets.all(
+                10,
+              ), // kurangi padding agar icon lebih kecil
               decoration: BoxDecoration(
-                color: selectedIndex == index ? primaryColor.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.0),
-                shape: BoxShape.circle
+                color: selectedIndex == index
+                    ? primaryColor.withValues(alpha: 0.2)
+                    : Colors.grey.withValues(alpha: 0.0),
+                shape: BoxShape.circle,
               ),
-              child: Icon(
-                categories[index]["icon"],
-                color: selectedIndex == index ? primaryColor : secondaryColor,
-                size: 20,
+              child: Image.asset(
+                categories[index]["icon"], 
+                width: 20, 
+                height: 20,
+                color: selectedIndex == index
+                    ? primaryColor
+                    : secondaryColor, 
               ),
             ),
             SizedBox(height: 7),
@@ -105,10 +100,12 @@ class _CategoriesState extends State<Categories> {
               categories[index]["text"],
               style: TextStyle(
                 color: selectedIndex == index ? primaryColor : secondaryColor,
-                fontWeight: selectedIndex == index ? FontWeight.bold : FontWeight.normal,
-                fontSize: 12
+                fontWeight: selectedIndex == index
+                    ? FontWeight.bold
+                    : FontWeight.normal,
+                fontSize: 12,
               ),
-            )
+            ),
           ],
         ),
       ),

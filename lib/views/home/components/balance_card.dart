@@ -8,78 +8,48 @@ class BalanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(defaultPadding),
-      padding: EdgeInsets.all(15),
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: Color(0xFF236A91),
-        borderRadius: BorderRadius.circular(12)
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 6,
+            offset: Offset(0, 3),
+          ),
+        ],
       ),
       child: Row(
         children: [
+          Icon(Icons.search, color: secondaryColor), 
+          SizedBox(width: 8),
           Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(8)
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.account_balance_wallet, color: Color(0xFF236A91)),
-                  SizedBox(width: 8),
-                  Text(
-                    "Bottles",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black
-                    ),
-                  )
-                    ],
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    "Rp 800.000",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black
-                    ),
-                  )
-                ],
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Search here...",
+                border: InputBorder.none,
               ),
             ),
           ),
-          Expanded(
-            flex: 3,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _actionButton(Icons.arrow_upward, "Pay"),
-                _actionButton(Icons.add_circle, "Top Up"),
-                _actionButton(Icons.explore, "Explore"),
-              ],
+          ElevatedButton(
+            onPressed: () {
+              // action search
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: primaryColor, 
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
             ),
-          )
+            child: Text(
+              "Go",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
-    );
-  }
-
-  Widget _actionButton(IconData icon, String label) {
-    return Column(
-      children: [
-        Icon(icon, color: Colors.white),
-        SizedBox(height: 4),
-        Text(
-          label,
-          style: TextStyle(
-            color: Colors.white
-          ),
-        )
-      ],
     );
   }
 }

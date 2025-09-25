@@ -48,11 +48,11 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
                 Padding(
                   padding: EdgeInsets.all(defaultPadding),
                   child: Text(
-                    "Drinkware",
+                    "New Arrival",
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: textColor
+                      color: const Color.fromARGB(255, 0, 0, 0)
                     ),
                   ),
                 ),

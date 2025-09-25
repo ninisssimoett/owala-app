@@ -18,8 +18,11 @@ class RegisterScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background warna (optional bisa pake gradient juga)
-          Container(color: Colors.grey[200]),
+         Container(
+            height: 250,
+            color: Colors.grey[300], 
+            child: Image.asset("assets/images/bgd.png", fit: BoxFit.cover),
+          ),
 
           Align(
             alignment: Alignment.bottomCenter,

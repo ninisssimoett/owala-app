@@ -11,8 +11,8 @@ class ProductTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    const double imageWidthRatio = 0.58; // ini akan mengambil 35% dari lebar layar
-    const double imageHeightRatio = 0.36; // ini akan mengambil 20% dari tinggi layar
+    const double imageWidthRatio = 0.58; 
+    const double imageHeightRatio = 0.36; 
     
     return Padding(
       padding: EdgeInsets.only(

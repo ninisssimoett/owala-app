@@ -21,9 +21,9 @@ class LoginScreen extends StatelessWidget {
           Container(
             height: 250,
             color: Colors.grey[300], 
-            child: Image.asset("assets/images/bgnb.png", fit: BoxFit.cover),
+            child: Image.asset("assets/images/bgd.png", fit: BoxFit.cover),
           ),
-          
+           
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
